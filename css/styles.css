@@ -1,0 +1,124 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgb(77, 133, 9);
+  padding: 15px;
+}
+
+.nav_menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_menu li {
+  list-style: none;
+}
+
+.kategori_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+#kategori_item {
+  background-color: rgb(77, 133, 9);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.produkt_container {
+  display: flex;
+  justify-content: center;
+}
+
+#produkt_item {
+  width: 400px;
+  background-color: rgb(77, 133, 9);
+  padding: 20px;
+}
+
+#produkt_item img {
+  max-width: 100%;
+}
+
+#produkt_item h2 {
+  all: unset;
+  text-align: center;
+  font-size: 15px;
+}
+
+#produkt_item div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.produkt_liste_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#produkt_liste_item {
+  width: 200px;
+  background-color: rgb(77, 133, 9);
+  padding: 15px;
+  margin: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+#produkt_liste_item img {
+  max-width: 100%;
+}
+
+#produkt_liste_item h2 {
+  all: unset;
+  font-size: 20px;
+}
+
+#produkt_liste_item div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Hvis produkt er udsolgt */
+
+.udsolgt {
+  position: absolute;
+  background-color: rgb(186, 177, 177);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 80%;
+}
+
+@media (max-width: 768px) {
+  .kategori_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .produkt_liste_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
